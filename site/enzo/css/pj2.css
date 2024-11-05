@@ -1,0 +1,22 @@
+.container{
+    display: flex;
+    width: 100%;
+    height: 300px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-top: 5%;
+}
+.oi{
+    width: 200px;
+    height: auto;
+    margin: 0.5%;
+    background-color: lightblue;
+    border: 3px blue solid;
+}
+.oi>img{
+    width: 100%;
+}
+.oi:hover{
+    background-color: blue;
+    scale: 1.3;
+}
