@@ -4,8 +4,8 @@ numero_secreto = random.randint(1, 10)
 tentativas = 0
 acertou = False
 
-while tentativas < 5:
-    palpite = int(input("-"))
+while tentativas < 4:
+    palpite = int(input(f"digite um numero de 1 a 10 - "))
 
     if palpite == numero_secreto:    
         acertou = True
