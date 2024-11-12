@@ -1,14 +1,14 @@
 import math
 
 '''
-este e um codico simples para você brincar com as probabilidades,
-estes calculos foram desenvolvidos por Grimes com o objetivo de
-prever quando uma conspiração iria ser revelada. De acordo com Grimes
-ele comparou 3 conspirações reais como a base de dados dele.
-Come este codico você pode prever quando irão derubar uma conspiracão
-de acordo com o numero de envolvidos.
-saiba mais em:
+Este e um código simples para você brincar com as probabilidades, estes cálculos foram desenvolvidos
+por Grimes com o objetivo de prever quando uma conspiração iria ser revelada. De acordo com Grimes
+ele comparou 3 conspirações reais como a base de dados dele. Come este código você pode prever quando
+irão derrubar uma conspiração de acordo com o número de envolvidos.
+
+Saiba mais em:
 https://youtu.be/4g8KhkInwyk?list=LL
+
 '''
 # Resultado deve ser maior que 0.95
 
