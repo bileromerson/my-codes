@@ -17,11 +17,12 @@ def probabilidade_exposicao(t, n):
     # Fórmula de Grimes para a probabilidade de exposição
 
     phi = 1-math.pow((1 - 0.01),(n * t))
-
     L = 1-math.pow(2.7182818, -t* phi)
-    print(f"Probabilidade de exposição após {t} anos: {L}")
+
+    print(f"Probabilidade de exposição após {round(t, 2)} anos: {round(L*100, 2)} %")
 
 tempo_anos = float(input("digite o tempo em anos: "))       # anos para considerar
 numero_conspiradores = int(input("número de conspiradores: "))  # quem supostamente não pode revelar o segredo
 probabilidade = probabilidade_exposicao(tempo_anos, numero_conspiradores)
+
 
