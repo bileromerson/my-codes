@@ -20,3 +20,6 @@ while tentativas < 4:
     
     if  acertou == True:
         tentativas = 6
+
+else:
+  print("suas tentativas acabaram")
