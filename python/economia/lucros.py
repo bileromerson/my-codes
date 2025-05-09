@@ -1,24 +1,49 @@
-num = int(input('=>>'))
-porcentagem = int(input('Digite a porcentagem de lucro: '))
-valor_inicial = float(input('Digite o valor inicial: '))
-meses = int(input('Digite a quantidade de meses: '))
 
-def total_lucro(porcentagem,meses,valor_inicial):
+def calcular_rendimento_cdi(cdi_anual, aporte_inicial, aporte_mensal, meses):
+    # Conversão do CDI anual para mensal (aproximação composta)
+    cdi_mensal = (1 + cdi_anual / 100) ** (1 / 12) - 1
 
-    for i in range(1, int(meses) + 1):
+    saldo = aporte_inicial
+    total_investido = aporte_inicial
 
-        valor_inicial = valor_inicial*(porcentagem/100)
+    rendimentos_por_mes = []
 
+    for mes in range(1, meses + 1):
+        rendimento = saldo * cdi_mensal
+        saldo += rendimento + aporte_mensal
+        total_investido += aporte_mensal
+        rendimentos_por_mes.append(rendimento)
 
-    print('O valor final é: ', round(valor_inicial, 2))
+    # Imposto regressivo sobre o rendimento (simples baseado no tempo total)
+    if meses <= 6:
+        imposto = 0.225
+    elif meses <= 12:
+        imposto = 0.20
+    elif meses <= 24:
+        imposto = 0.175
+    else:
+        imposto = 0.15
 
-def quanto_investir():
-    # continuar depois
-    # adicionarr for, para calcular o valor final dos meses.
-    v = valor_inicial (valor_inicial*(porcentagem/100))
+    lucro_bruto = saldo - total_investido
+    imposto_pago = lucro_bruto * imposto
+    lucro_liquido = lucro_bruto - imposto_pago
 
+    return {
+        "Total investido": round(total_investido, 2),
+        "Valor final": round(saldo, 2),
+        "Lucro bruto": round(lucro_bruto, 2),
+        "Imposto aproximado": round(imposto_pago, 2),
+        "Lucro líquido": round(lucro_liquido, 2)
+    }
 
-if num == 1:
-    total_lucro(porcentagem,meses,valor_inicial)
-else:
-    pass
+# Exemplo de uso:
+cdi = float(input("Informe o CDI anual (%): "))
+inicial = float(input("Quanto vai colocar inicialmente? R$ "))
+mensal = float(input("Quanto vai entrar todo mês? R$ "))
+prazo = int(input("Por quantos meses você quer simular? "))
+
+resultado = calcular_rendimento_cdi(cdi, inicial, mensal, prazo)
+
+print("\nResultado da simulação:")
+for chave, valor in resultado.items():
+    print(f"{chave}: R$ {valor}")
