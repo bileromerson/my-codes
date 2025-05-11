@@ -33,11 +33,23 @@ def calcular_rendimento_cdi(cdi_real, percentual_cdi, aporte_inicial, aporte_men
     }
 
 # Entradas do usuário
-cdi_real = float(input("Informe o CDI atual (14,65)(%): "))
-percentual_cdi = float(input("Qual o % do CDI que o investimento rende? "))
+
+print('para escolhas com padrao, digite 0 \n caso contrario, digite o valor desejado')
+
+cdi_real = float(input("Informe o CDI atual (padrao: 14.65%): "))
+
+if cdi_real == 0:
+    print("o cdi foi ajustado para padrao (14.65)")
+    cdi_real = 14.65
+
+percentual_cdi = float(input("Qual o % do CDI que o investimento rende (padrao: 100%)? "))
+if percentual_cdi == 0:
+    print("o percentual foi ajustado para padrao (100%)")
+    percentual_cdi = 100
 inicial = float(input("Quanto vai colocar inicialmente? R$ "))
 mensal = float(input("Quanto vai entrar todo mês? R$ "))
 prazo = int(input("Por quantos meses você quer simular? "))
+
 
 resultado = calcular_rendimento_cdi(cdi_real, percentual_cdi, inicial, mensal, prazo)
 
