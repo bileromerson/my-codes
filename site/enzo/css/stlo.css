@@ -1,0 +1,30 @@
+body{
+    text-align: center;
+    background-image: url(https://wallpapers.com/images/hd/discord-logo-ii18fxkyw33q703l.jpg);
+}
+table,th,td{
+    border: 5px solid red;
+}
+table{
+    border-collapse: collapse;
+}
+#tabela{
+    margin: auto;
+}
+div h1 p span{
+    color: red;
+}
+p h3 span{
+    color: red;
+}
+.img{
+    display: inline-block;
+}
+@media (max-width: 320px){
+    #img > img{
+        display: none;
+    }
+}
+img[src$="jfif"]{
+    border-radius: 5px solid black;
+}

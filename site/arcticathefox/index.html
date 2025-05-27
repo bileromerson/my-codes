@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bile</title>
+    <style>
+        body {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        #title {
+            font-family: 'Arial', sans-serif;
+            font-size: 2.5rem;
+            color: whitesmoke;
+            text-align: center;
+            margin: 20px 0;
+        }
+        #text1 {
+            font-family: 'Arial', sans-serif;
+            font-size: 1.2rem;
+            color: whitesmoke;
+            margin-bottom: 20px;
+        }
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            position: relative;
+            padding-left: 30px;
+            color: whitesmoke;
+            font-family: 'Arial', sans-serif;   
+            list-style: none;
+            text-align: left;
+        }
+        #list li{
+            text-indent: -1.5em;
+        }
+        #list li::before {
+            font-size: 1.5em;
+            content: "★";
+            color: #00b2ff;
+            margin-right: 3px;
+            margin-bottom: 5px;
+        }
+        #linner{
+            padding: 25px;
+            width: 40vh;
+            border-radius: 30px;
+            background-image: linear-gradient(to bottom, #004ca6, #4d008a);
+        }
+        #pricing {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+        .fade-in-img {
+            border-radius: 12px;
+            width: 300px;
+            opacity: 0;
+            transition: opacity 1.25s ease-in;
+        }
+        .price-text{
+            font-family: 'Arial', sans-serif;
+            font-size: 0.8rem;
+            color: whitesmoke;
+            margin-bottom: 30px;
+            margin-top: 30px;
+        }
+        .fade-in-img.visible {
+            opacity: 1;
+        }
+        p{
+            color: whitesmoke;
+            font-family: 'Arial', sans-serif;
+        }
+        hr{
+            background-color: #00b2ff;
+            height: 0px; width: 100%;
+            border:solid #00b2ff 0.3px;
+            border-top: 0.2px;
+        }
+        #button{
+            position: static;
+            background-color: transparent;
+            border: 0.3px solid #00b2ff;
+            color: white;
+            text-align: left;
+            padding: 15px 30px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Arial', sans-serif;
+            font-size: 1rem;
+            height: 15px;
+            width: 250px;
+            margin-left: 10px auto;
+            margin-top: 15px;
+            transition: height 0.3s ease, width 0.3s ease, margin-left 0.3s ease, margin-top 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        #button:hover {
+            margin-left: -10px;
+            position: relative;
+            margin-top: 10px;
+            height: 20px;
+            width: 270px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wallpaper">
+        <div id="linner">
+            <ul>
+                <li id="button">
+                    Back To Homepage
+                </li>
+            </ul>
+            <h1 id="title">
+                <span>
+                    Commissions
+                    <br>
+                    <span style="color: #CA59FF;">Currently Closed</span>
+            </span>
+            </h1>
+            <p id="text1">Terms of Service</p>
+            <ul id="list" >
+                <li>Commissions are for personal use ONLY</li>
+                <li>Any commission I make has a chance of being featured on my socials</li>
+                <li>If you want to post or use my artwork, credit me by tagging me or linking my socials</li>
+                <li>I watermark all of my work, you may NOT request to remove it, and no NOT attempt to remove it yourself</li>
+                <li>I am a strictly SFW artist, meaning I will NOT draw NSFW/nudity/lewd art</li>
+                <li>I hold the right to refuse any commission for any reason</li>
+                <li>Turnaround times can vary greatly from a few hours to a few days depending on personal circumstances, your patience is greatly appreciated</li>
+                <li>Payment is through Paypal invoicing ONLY</li>
+                <li>I only accept full upfront payments</li>
+                <li>I have a strict no refund policy, please make sure you can pay for the artwork</li>
+            </ul>
+            <hr>
+            <p style=" font-size: 20px;">Prices</p>
+            <p>*All prices listed are base prices. Prices may increase depending on complexity, additional characters, props, outfits, backgrounds, and more</p>
+            <div id="pricing">
+                <p class="price-text">Flat Color <br> Bust - $25 | Fullbody - $30</p>
+                <img src="./img/image04.jpg" alt="" class="fade-in-img" id="image04" onload="this.classList.add('loaded')">
+            </div>
+            <div id="pricing">
+                <p class="price-text">Simple Shading <br> Bust - $30 | Fullbody - $35</p>
+                <img src="./img/image05.jpg" alt="" class="fade-in-img" id="image05" onload="this.classList.add('loaded')">
+            </div>
+            <div id="pricing">
+                <p class="price-text">Full Render <br> Bust - $35 | Fullbody - $45</p>
+                <img src="./img/image06.jpg" alt="" class="fade-in-img" id="image06" onload="this.classList.add('loaded')">
+            </div>
+            <div id="pricing">
+                <p class="price-text">Reference Sheets <br> Simple - $30 | Standard - $70</p>
+                <img src="./img/image07.jpg" alt="" class="fade-in-img" id="image07" onload="this.classList.add('loaded')">
+            </div>
+            <p>Special Requests</p>
+            <p style="font-size: 13px;">Want something you don't see? Don't be afraid to ask!</p>
+            <p style="font-size: 13px;">I've done customs, fursona badges, icons, banners, wallpapers, emotes, telegram stickers, thumbnails, comics, animations, and more! Just let me know, and we'll work it out!</p>
+            <hr>
+            <p style="font-size:20px;">Ready to Contact?</p>
+            <ul style="text-align: center;">
+                <li id="button" onclick="window.open('https://www.instagram.com/arcticathefox/', '_blank')">instagram</li>
+                <li id="button" onclick="window.open('https://twitter.com/arcticathefox', '_blank')">Twitter</li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script>
+    const img = document.querySelector('#image04');
+    const img2 = document.querySelector('#image05');
+    const img3 = document.querySelector('#image06');
+    const img4 = document.querySelector('#image07');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            const el = entry.target;
+            if (entry.isIntersecting) {
+                el.classList.add('visible');
+            } else {
+                el.classList.remove('visible');
+            }
+        });
+    }, {
+        threshold: 0.8
+    });
+    observer.observe(img);
+    observer.observe(img2);
+    observer.observe(img3);
+    observer.observe(img4);
+</script>
+</html>
+<!-- tamanho min = 336
+ meio = 360px tamanho proporcional a tela +
+ meio 736px tamanho proporcional a tela
+ meio = 980px padrao
+tamanho max = 1450px
+-->
